@@ -7,11 +7,9 @@ exports.handler = async function (event, context) {
             body: JSON.stringify({ message: message }),
         };
     } catch (e) {
-        if (message === undefined) {
-            return {
-                statusCode: 400,
-                body: JSON.stringify({}),
-            };
-        }
+        return {
+            statusCode: 400,
+            body: JSON.stringify({}),
+        };
     }
 };
